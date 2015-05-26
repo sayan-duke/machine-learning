@@ -17,7 +17,7 @@
 		- [Examples](#)
 			- [Dimension Reduction](#)
 			- [Graphical Models](#)
-	- [Kernel Sliced Inverse Regression (kSIR)](#) - KSIR
+	- [Kernel Sliced Inverse Regression (kSIR)](#) - KSIR/
 		- [Introduction](#)
 		- [Inputs and Outputs](#)
 		- [A toy Example](#)
