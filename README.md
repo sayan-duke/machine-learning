@@ -24,7 +24,7 @@ in the command line with opts.pType = 'c' and opts.numNN = 10. The third argumen
 
 The output LS is a structure, and usually LS.edrs which represents the estimated EDRs is of concern. By typing "plot(LS.edrs(:,1)'*X(:,Y==1) , LS.edrs(:,2)'*X(:,Y==1))" followed by "hold on; plot(LS.edrs(:,1)'*X(:,Y==-1) , LS.edrs(:,2)'*X(:,Y==-1))" one projects the training data X onto the estimated 2 EDRs and visualizes it. The resulting figure is shown in Figure 1 (b). We also form an independent test dataset formatted like X and repeat the project and visualize procedure, and the resulting figure is shown in Figure 1 (c).
 
-![tai chi](https://raw.github.com/sayan-duke/machine-learning/readme-images/taichi.jpg)
+![tai chi](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/digifig.jpg)
 
 Figure1: The first two dimensions of the Tai-Chi data (a), projection (on the estimated first two EDRs) of the training data (b) and projection (on the estimated first two EDRs) of an independent test data (c).
 
@@ -47,7 +47,7 @@ Unzip the downloaded file. To start, first make sure that the folder "BMI/" and 
 
 We illustrate how dimension reduction can be performed in this section by considering a classification problem for handwritten digits. An illustration of the digit data is shown in Figure 1. Each digit is represented by a 28*28=784 vector that contains the pixel values.
 
-![digifig](https://raw.github.com/sayan-duke/machine-learning/readme-images/digifig.jpg)
+![digifig](https://raw.githubusercontent.com/sayan-duke/machine-learning/readme-images/digifig.jpg)
 
 Figure1: Illustration of handwritten digit data 1-9.
 \includegraphics[totalheight=2.5in]{digifig.jpg}
@@ -63,7 +63,7 @@ The fifth argument 'T' tells the program to pre-process the data by a principle 
 
 Now Bpost, a 784*1000 matrix, contains the posterior samples for the e.d.r., and B is the orthonormalized version of the mean of Bpost. "mean(Bpost,2)" and "std(Bpost,0,2)" return the posterior mean and standard deviation for this direction, both 784 vectors. We can plot them in a visually friendly way by "imagesc(reshape(mean(Bpost,2),28,28)')" and "imagesc(reshape(std(Bpost,0,2),28,28)')" with the results shown in Figure 2. The red part in the left panel is exactly the region that differentiates digit "5" and "8", hence if we project the original data onto this direction we can immediately perform classification. The right panel indicates small uncertainty.
 
-![digi58topf](https://raw.github.com/sayan-duke/machine-learning/readme-images/digi58topf.jpg)
+![digi58topf](https://raw.githubusercontent.com/sayan-duke/machine-learning/readme-images/digi58topf.jpg)
 
 Figure2: The left panel is the posterior mean and the right panel is the posterior standard deviation for the top dimension reduction direction.
 
