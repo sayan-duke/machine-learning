@@ -1,27 +1,27 @@
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+**Table of Contents**
 
 - [Machine Learning](#)
-	- [Localized sliced inverse regression](#)
+	- [Localized sliced inverse regression](#) - LSIR/
 		- [Introduction](#)
 		- [Inputs and Outputs](#)
 		- [Examples](#)
 			- [Tai-Chi](#)
-	- [Bayesian Mixture of Inverse Regression (BMI)](#)
+	- [Bayesian Mixture of Inverse Regression (BMI)](#) - BMI/
 		- [Introduction](#)
 		- [A Brief Tutorial](#)
 		- [Examples](#)
 			- [Dimension Reduction](#)
-	- [Bayesian Gradient Learning](#)
+	- [Bayesian Gradient Learning](#) - gradlearn/
 		- [Introduction](#)
 		- [A Brief Tutorial](#)
 		- [Examples](#)
 			- [Dimension Reduction](#)
 			- [Graphical Models](#)
-	- [Kernel Sliced Inverse Regression (kSIR)](#)
+	- [Kernel Sliced Inverse Regression (kSIR)](#) - KSIR
 		- [Introduction](#)
 		- [Inputs and Outputs](#)
 		- [A toy Example](#)
-		
+
 
 # Machine Learning
 
