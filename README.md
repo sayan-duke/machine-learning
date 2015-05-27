@@ -49,7 +49,7 @@ in the command line with opts.pType = 'c' and opts.numNN = 10. The third argumen
 
 The output LS is a structure, and usually LS.edrs which represents the estimated EDRs is of concern. By typing "plot(LS.edrs(:,1)'*X(:,Y==1) , LS.edrs(:,2)'*X(:,Y==1))" followed by "hold on; plot(LS.edrs(:,1)'*X(:,Y==-1) , LS.edrs(:,2)'*X(:,Y==-1))" one projects the training data X onto the estimated 2 EDRs and visualizes it. The resulting figure is shown in Figure 1 (b). We also form an independent test dataset formatted like X and repeat the project and visualize procedure, and the resulting figure is shown in Figure 1 (c).
 
-![tai chi](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/digifig.jpg)
+![tai chi](https://stat.duke.edu/~km68/fig/digifig.jpg)
 
 Figure1: The first two dimensions of the Tai-Chi data (a), projection (on the estimated first two EDRs) of the training data (b) and projection (on the estimated first two EDRs) of an independent test data (c).
 
@@ -94,7 +94,7 @@ Unzip the downloaded file. To start, first make sure that the folder "BMI/" and 
 
 We illustrate how dimension reduction can be performed in this section by considering a classification problem for handwritten digits. An illustration of the digit data is shown in Figure 1. Each digit is represented by a 28*28=784 vector that contains the pixel values.
 
-![digifig](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/digifig.jpg)
+![digifig](https://stat.duke.edu/~km68/fig/digifig.jpg)
 
 Figure1: Illustration of handwritten digit data 1-9.
 Suppose we want to classify digit "5" and digit "8". We can collect 100 samples for each digit and label digit "5" as response=1 and digit "8" as response=0, so that the covariates X is a 200*784 matrix for pixel values and the response Y is a 200 vector for class labels. We can type in the command line:
@@ -109,7 +109,7 @@ The fifth argument 'T' tells the program to pre-process the data by a principle 
 
 Now Bpost, a 784*1000 matrix, contains the posterior samples for the e.d.r., and B is the orthonormalized version of the mean of Bpost. "mean(Bpost,2)" and "std(Bpost,0,2)" return the posterior mean and standard deviation for this direction, both 784 vectors. We can plot them in a visually friendly way by "imagesc(reshape(mean(Bpost,2),28,28)')" and "imagesc(reshape(std(Bpost,0,2),28,28)')" with the results shown in Figure 2. The red part in the left panel is exactly the region that differentiates digit "5" and "8", hence if we project the original data onto this direction we can immediately perform classification. The right panel indicates small uncertainty.
 
-![digi58topf](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/digi58topf.jpg)
+![digi58topf](https://stat.duke.edu/~km68/fig/digi58topf.jpg)
 
 Figure2: The left panel is the posterior mean and the right panel is the posterior standard deviation for the top dimension reduction direction.
 
@@ -170,7 +170,7 @@ Additional inputs are available. For a further detailed explanation of the input
 
 We illustrate how dimension reduction can be performed in this section by considering a classification problem for handwritten digits. An illustration of the digit data is shown in Figure 1. Each digit is represented by a 28*28=784 vector that contains the pixel values.
 
-![digifig](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/digifig.jpg)
+![digifig](https://stat.duke.edu/~km68/fig/digifig.jpg)
 
 
 Figure1: Illustration of handwritten digit data 1-9.
@@ -182,7 +182,7 @@ where the fourth argument specifies [burn-in steps, number of posterior samples 
 
 Now dr{1}, a 784*1000 matrix, contains the posterior samples for the first (top) dimension reduction direction. "mean(dr{1},2)" and "std(dr{1},0,2)" return the posterior mean and standard deviation for this direction, both 784 vectors. We can plot them in a visually friendly way by "imagesc(reshape(mean(dr{1},2),28,28)')" and "imagesc(reshape(std(dr{1},0,2),28,28)')" with the results shown in Figure 2. The red part in the left panel is exactly the region that differentiates digit "5" and "8", hence if we project the original data onto this direction we can immediately perform classification. The right panel indicates small uncertainty.
 
-![digi58topf](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/digi58topf.jpg)
+![digi58topf](https://stat.duke.edu/~km68/fig/digi58topf.jpg)
 
 Figure2: The left panel is the posterior mean and the right panel is the posterior standard deviation for the top dimension reduction direction.
 
@@ -196,7 +196,7 @@ Now "gop" is the draw of the GOP matrix, with each column a draw for the GOP but
 
 Figure 3 shows the posterior mean and standard deviation for the GOP matrix and the partial correlation matrix. The partial correlation matrix clearly captures the negative covariation between Dimension 1,3,5 w.r.t the response.
 
-![toyg](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/toyg.jpg)
+![toyg](https://stat.duke.edu/~km68/fig/digi58topf.jpgtoyg.jpg)
 
 Figure3: The posterior mean and standard deviation for the GOP matrix and the partial correlation matrix.
 
@@ -257,6 +257,6 @@ var1=zeros(400,1); for i=1:400 var1(i)=SIR.C*(KER(:,i)-mean(KER(:,i)))+SIR.b; en
 
 calculates one kSIR variate (since only one EDR is chosen) for each of the observations, and "plot(var1,Y, '.')" produces the Figure below, from which it is seen that this variate is highly predictive.
 
-![ksirtoy](https://raw.githubusercontent.com/sayan-duke/machine-learning/master/readme_images/ksirtoy.jpg)
+![ksirtoy](https://stat.duke.edu/~km68/fig/ksirtoy.jpg)
 
 Full description [here](https://stat.duke.edu/~km68/ksir.htm).
